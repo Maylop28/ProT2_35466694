@@ -1,0 +1,154 @@
+body {
+    margin: 0;
+    font-family: 'Segoe UI', sans-serif;
+    background: linear-gradient(135deg, #74ebd5, #9face6);
+   
+  }
+  
+  .container {
+    background: white;
+    border-radius: 20px;
+    padding: 40px;
+    box-shadow: 0 10px 40px rgba(0,0,0,0.2);
+    width: 300px;
+    text-align: center;
+    transition: transform 0.3s ease;
+  }
+  
+  h2 {
+    margin-bottom: 20px;
+    color: #333;
+  }
+  
+  input {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: none;
+    border-radius: 10px;
+    background: #f0f0f0;
+    transition: 0.3s;
+  }
+  
+  input:focus {
+    background: #e0e0e0;
+    outline: none;
+  }
+  
+  button {
+    background: #6a11cb;
+    background: linear-gradient(to right, #2575fc, #6a11cb);
+    color: white;
+    border: none;
+    padding: 12px 20px;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: transform 0.3s;
+    margin-top: 10px;
+  }
+  
+  button:hover {
+    transform: scale(1.05);
+  }
+  
+  #toggle-form {
+    margin-top: 20px;
+    font-size: 0.9em;
+  }
+  
+  #toggle-form span {
+    color: #6a11cb;
+    cursor: pointer;
+    font-weight: bold;
+  }
+  .card-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    justify-content: center;
+  }
+
+  .card {
+    background: #fff;
+    border-radius: 20px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+    width: 300px;
+    padding: 25px;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    animation: fadeIn 1s ease;
+  }
+
+  .card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 12px 30px rgba(0,0,0,0.2);
+  }
+
+  .card img {
+    width: 100%;
+    border-radius: 15px;
+    margin-bottom: 15px;
+  }
+
+  .card h3 {
+    color: #1e88e5;
+    margin-bottom: 10px;
+  }
+
+  .card p {
+    color: #444;
+    font-size: 1em;
+    line-height: 1.4;
+  }
+
+  @keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+
+  @media (max-width: 700px) {
+    .card-container {
+      flex-direction: column;
+      align-items: center;
+    }
+  }
+  
+  .titulo {
+    font-size: 3rem;
+    color: #1e88e5;
+    text-align: center;
+    font-weight: bold;
+    letter-spacing: 2px;
+    position: relative;
+    animation: slideIn 1s ease forwards;
+    opacity: 0;
+  }
+
+  .titulo::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 4px;
+    background: #1e88e5;
+    bottom: -10px;
+    left: 0;
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 0.5s ease;
+  }
+
+  .titulo:hover::after {
+    transform: scaleX(1);
+  }
+
+  @keyframes slideIn {
+    from {
+      transform: translateY(-50px);
+      opacity: 0;
+    }
+    to {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
